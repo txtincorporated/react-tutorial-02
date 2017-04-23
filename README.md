@@ -19,5 +19,10 @@
   - Socket.io: for handling real-time full-duplex messaging over HTTP
   - nTwitter: Node Twitter API library
 
+* **NOTE** the advantage of using isomorphic code to support server side renedering:  allows us to dynamically update the DOM without degrading SEO
+
+* **WHY** are we not using `src` and `build` folders?  Is it because we're building into the browser with Browserify instead of into a server-side directory?  Seems like you would still need an entry point for the build, but maybe this has to do with the specific workings of Browserify.
+
 ## TERMS AND CONCEPTS
+* **isomorphic JavaScript:** JS written in such a way that a single code base can run on both client and server
 * **server side rendering:** in React, the ability of the code to render a DOM on the server side, update and serve it on the fly to a "virtual DOM" in the client rather than sending the data to the client for rendering there as static HTML
