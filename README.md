@@ -22,6 +22,7 @@
 * **NOTE** the advantage of using isomorphic code to support server side renedering:  allows us to dynamically update the DOM without degrading SEO
 
 * **WHY** are we not using `src` and `build` folders?  Is it because we're building into the browser with Browserify instead of into a server-side directory?  Seems like you would still need an entry point for the build, but maybe this has to do with the specific workings of Browserify.
+  - **A:** See `build` and `browserify` commands in `package.json`.
 
 ## TERMS AND CONCEPTS
 * **isomorphic JavaScript:** JS written in such a way that a single code base can run on both client and server
