@@ -3,11 +3,11 @@ import React from 'react';
 import TweetsApp from './components/TweetsApp.react';
 import Tweet from './models/Tweet';
 
-module.exports = {
+export default {
   // Static model method to get tweets from db
   index: (req, res) => {
     Tweet.getTweets(0, 0, (tweets, pages) => {
-      const markup = React.renderComponentToString(
+      const markup = React.renderToString(
         TweetsApp({
           tweets: tweets
           

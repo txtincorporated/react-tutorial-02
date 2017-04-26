@@ -1,6 +1,6 @@
 import Tweet from '../models/Tweet';
 
-module.exports = function(stream, io) {
+export default (stream, io) => {
   stream.on('data', data => {
     // new tweet object populated from stream data
     const tweet = {
