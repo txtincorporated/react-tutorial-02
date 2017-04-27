@@ -141,7 +141,7 @@ export default class TweetsApp extends Component {
         <Loader paging={this.state.paging}/>
         <NotificationBar count={this.state.count} onShowNewTweets={this.showNewTweets}/>
       </div>
+      
     );
   }
-
 }
