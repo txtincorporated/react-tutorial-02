@@ -2,7 +2,7 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 import http from 'http';
 import mongoose from 'mongoose';
-import twitter from 'ntwitter';
+import Twitter from 'ntwitter';
 import routes from './routes';
 import config from './config';
 import streamHandler from './utils/streamHandler';
@@ -20,7 +20,7 @@ app.disable('etag');
 mongoose.connect('mongodb://localhost/react-tweets');
 
 // Create new ntwitter instance
-const twit = new twitter(config.twitter);
+const twit = new Twitter(config.twitter);
 
 // Default route
 app.get('/', routes.index);
@@ -29,7 +29,7 @@ app.get('/', routes.index);
 app.get('/page/:page/:skip', routes.page);
 
 // Set /public as static content dir
-app.use("/", express.static(__dirname + "/public/"));
+app.use('/', express.static(__dirname + '/public/'));
 
 // Start server
 const server = http.createServer(app).listen(port, function() {

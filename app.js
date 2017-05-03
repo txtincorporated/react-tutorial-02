@@ -6,6 +6,6 @@ const initialState = JSON.parse(document.getElementById('initial-state').innerHT
 
 // Take over and finish component rendering as started on server
 React.render(
-  <TweetsApp tweets={initialState}/>,
+  <TweetsApp tweets={ initialState }/>,
   document.getElementById('react-app')
 );
