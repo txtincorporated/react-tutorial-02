@@ -12,8 +12,8 @@
     "babelify": "^7.3.0",
     "browserify": "^14.3.0",
     "react-scripts": "0.9.5",
-    "reactify": "^1.1.1", 
-    "uglify-js": "^2.4.10",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.8.22",
     "watchify": "^3.9.0"
   },
   "dependencies": {
@@ -35,7 +35,19 @@
   },
   "browserify": {
     "transform": [
-      ["babelify", {"presets": ["es2015", "react"]}]
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
     ]
+  },
+  "optionalDependencies": {
+    "bufferutil": "^3.0.0",
+    "utf-8-validate": "^3.0.1"
   }
 }
