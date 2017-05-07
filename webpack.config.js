@@ -18,16 +18,16 @@ module.exports = {
   // ]
   module: {
     rules: [{
-      enforce: 'pre',
-      test: /\.js$/,
-      loader: "handlebars-loader",
-      exclude: /node_modules/ 
-    }, {
       test: /\.js$/,
       exclude: /'node_modules'/,
       loader: 'babel-loader'
     }, {
-      loader: 'style-loader!css-loader'
+      test: /\.handlebars$/,
+      loader: 'handlebars-loader',
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader',
+      exclude: /node_modules/ 
     }]
   }
 };

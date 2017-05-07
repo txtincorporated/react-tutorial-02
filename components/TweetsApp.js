@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Tweets from './Tweets';
 import Loader from './Loader';
 import NotificationBar from './NotificationBar';
-import io from 'socket.io';
+import io from 'socket.io-client';
 
 export default class TweetsApp extends Component {
   constructor(props) {
