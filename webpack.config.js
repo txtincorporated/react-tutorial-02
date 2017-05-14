@@ -1,10 +1,11 @@
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const CopyWebPackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './app.js',
   output: {
-    path: './public/build',
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   devtool: 'source-map',
@@ -18,7 +19,7 @@ module.exports = {
   // ]
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /'node_modules'/,
       loader: 'babel-loader'
     }, {
