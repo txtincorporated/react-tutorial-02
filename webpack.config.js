@@ -1,4 +1,4 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const CopyWebPackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
@@ -9,14 +9,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   devtool: 'source-map',
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: './views/layouts/main.handlebars'
-  //   }),
-  //   new CopyWebPackPlugin([{
-  //     from: ''
-  //   }])
-  // ]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './views/layouts/main.handlebars'
+    }),
+    // new CopyWebPackPlugin([{
+    //   from: ''
+    // }])
+  ],
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
