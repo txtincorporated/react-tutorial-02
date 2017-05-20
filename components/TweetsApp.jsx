@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Tweets from './Tweets';
-import Loader from './Loader';
-import NotificationBar from './NotificationBar';
+import Tweets from './Tweets.jsx';
+import Loader from './Loader.jsx';
+import NotificationBar from './NotificationBar.jsx';
 import io from 'socket.io-client';
 
 export default class TweetsApp extends Component {

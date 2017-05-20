@@ -1,6 +1,6 @@
 import JSX, { install } from 'node-jsx';
 import React from 'react';
-import TweetsApp from './components/TweetsApp.react';
+import TweetsApp from './components/TweetsApp.jsx';
 import Tweet from './models/Tweet';
 
 export default {

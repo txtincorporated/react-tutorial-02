@@ -37,9 +37,9 @@ const server = http.createServer(app).listen(port, function() {
 });
 
 // Initialize socket.io
-const io = require('socket.io-client').listen(server);
+const io = require('socket.io').listen(server);
 
 // Set stream listener for tweets matching tracking keywords
-twit.stream('statuses/filter', { track: 'scotch_io, #scotchio' }, function(stream) {
+twit.stream('statuses/filter', { track: 'canada, #canada' }, function(stream) {
   streamHandler(stream, io);
 });

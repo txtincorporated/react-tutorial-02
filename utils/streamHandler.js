@@ -21,7 +21,7 @@ export default (stream, io) => {
       if(!err) {
         io.emit('tweet', tweet);
 
-      }
+      } else console.log('ERROR: ', err);
     });
   });
 };

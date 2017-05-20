@@ -5,7 +5,7 @@
   "author": "Nathan P. Keene via Ken Wheeler",
   "license": "MIT",
   "repository": "https://github.com/txtincorporated/react-tutorial-02",
-  "main": "server.js",
+  "main": "app.js",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

@@ -26,7 +26,7 @@ schema.statics.getTweets = function(page, skip, callback) {
       tweets.forEach(tweet => {
         tweet.active = true;
       });
-    }
+    } else console.log('ERROR', err);
 
     callback(tweets);
 
